@@ -1,6 +1,4 @@
-﻿
-
-namespace MathsGame
+﻿namespace MathsGame
 {
     internal class Menu
     {
@@ -54,12 +52,9 @@ namespace MathsGame
                         break;
                     default:
                         Console.WriteLine("Invalid input");
-                        //Environment.Exit(1);
-
                         break;
                 }
             } while (isGameOn);
-
         }
     }
 }

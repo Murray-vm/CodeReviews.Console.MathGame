@@ -1,6 +1,5 @@
 ﻿using MathsGame.Models;
 
-
 namespace MathsGame
 {
     internal class Helpers
@@ -9,7 +8,6 @@ namespace MathsGame
 
         internal static void PrintGames()
         {
-
             Console.Clear();
             Console.WriteLine("Games history");
             Console.WriteLine("--------------------------------------");
@@ -35,12 +33,9 @@ namespace MathsGame
         internal static int[] GetDivisionNumbers(GameDifficulty gameDifficulty)
         {
             var random = new Random();
-     
             int multiplier = (int)Math.Pow(10, (int)gameDifficulty);
-
             var firstNumber = random.Next(1 * multiplier, 99 * multiplier);
             var secondNumber = random.Next(1 * multiplier, 99 * multiplier);
-
             var result = new int[2];
 
             while (firstNumber % secondNumber != 0)
@@ -57,7 +52,6 @@ namespace MathsGame
 
         internal static string ValidateResult(string result)
         {
-
             while (string.IsNullOrEmpty(result) || !Int32.TryParse(result, out _))
             {
                 Console.WriteLine("Your answer needs to be an integer. Try again");
@@ -72,7 +66,6 @@ namespace MathsGame
             Console.WriteLine("Please type in your name");
             var name = Console.ReadLine();
 
-
             while (string.IsNullOrEmpty(name))
             {
                 Console.WriteLine("Name can't be empty");
@@ -84,7 +77,6 @@ namespace MathsGame
 
         internal static GameDifficulty GetDifficulty()
         {
-
             Console.Clear();
             Console.WriteLine($@"Select a difficulty
             1 - Easy
@@ -95,7 +87,6 @@ namespace MathsGame
 
             while (true)
             {
-
                 switch (difficulty.Trim())
                 {
                     case "1":
@@ -109,9 +100,7 @@ namespace MathsGame
                         difficulty = Console.ReadLine();
                         break;
                 }
-
             }
-
         }
 
         internal static int getRandomNumber(GameDifficulty gameDifficulty)
@@ -121,7 +110,5 @@ namespace MathsGame
 
             return random.Next(1 * multiplier, 9 * multiplier);
         }
-
-
     }
 }

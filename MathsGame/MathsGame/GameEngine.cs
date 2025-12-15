@@ -1,6 +1,4 @@
-﻿
-
-using MathsGame.Models;
+﻿using MathsGame.Models;
 
 namespace MathsGame
 {
@@ -66,7 +64,6 @@ namespace MathsGame
 
             for (int i = 0; i < 5; i++)
             {
-
                 firstNumber = Helpers.getRandomNumber(gameDifficulty);
                 secondNumber = Helpers.getRandomNumber(gameDifficulty);
 
@@ -87,7 +84,6 @@ namespace MathsGame
                     Console.WriteLine("Your answer was incorrect. Type any key to continue");
                     Console.ReadLine();
                 }
-
             }
 
             Console.WriteLine($"Game over. Your final score is: {score}. Press any key to return to the main menu");
@@ -108,7 +104,6 @@ namespace MathsGame
 
             for (int i = 0; i < 5; i++)
             {
-
                 firstNumber = Helpers.getRandomNumber(gameDifficulty);
                 secondNumber = Helpers.getRandomNumber(gameDifficulty);
 
@@ -129,7 +124,6 @@ namespace MathsGame
                     Console.WriteLine("Your answer was incorrect. Type any key to continue");
                     Console.ReadLine();
                 }
-
             }
 
             Console.WriteLine($"Game over. Your final score is: {score}. Press any key to return to the main menu");
@@ -171,7 +165,6 @@ namespace MathsGame
                     Console.WriteLine("Your answer was incorrect. Type any key to continue");
                     Console.ReadLine();
                 }
-
             }
 
             Console.WriteLine($"Game over. Your final score is: {score}. Press any key to return to the main menu");
