@@ -26,11 +26,6 @@ namespace MathsGame
                 var result = Console.ReadLine();
                 result = Helpers.ValidateResult(result);
 
-                while (string.IsNullOrEmpty(result) || !Int32.TryParse(result, out _)) {
-                    Console.WriteLine("Your answer needs to be an integer. Try again");
-                    result = Console.ReadLine();
-                }
-
                 if (int.Parse(result) == firstNumber + secondNumber)
                 {
                     score++;
