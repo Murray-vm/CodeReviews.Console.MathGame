@@ -1,4 +1,6 @@
-﻿namespace MathsGame
+﻿using MathsGame.Models;
+
+namespace MathsGame
 {
     internal class Menu
     {
@@ -31,16 +33,16 @@
                 switch (gameSelected.Trim().ToLower())
                 {
                     case "a":
-                        gameEngine.AdditionGame("Addition game");
+                        gameEngine.Game(GameType.Addition, "Addition game");
                         break;
                     case "s":
-                        gameEngine.SubtractionGame("Subtraction game");
+                        gameEngine.Game(GameType.Subtraction, "Subtraction game");
                         break;
                     case "m":
-                        gameEngine.MultiplicationGame("Multiplication game");
+                        gameEngine.Game(GameType.Multiplication, "Multiplication game");
                         break;
                     case "d":
-                        gameEngine.DivisionGame("Division game");
+                        gameEngine.Game(GameType.Division, "Division game");
                         break;
                     case "q":
                         Console.WriteLine("Goodbye");

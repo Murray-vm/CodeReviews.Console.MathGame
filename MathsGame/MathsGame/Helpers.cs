@@ -110,5 +110,49 @@ namespace MathsGame
 
             return random.Next(1 * multiplier, 9 * multiplier);
         }
+
+        internal static char GetMathSymbol(GameType gameType)
+        {
+            switch (gameType)
+            {
+                case GameType.Addition:
+                    return '+';
+                    break;
+                case GameType.Subtraction:
+                    return '-';
+                    break;
+                case GameType.Division:
+                    return '/';
+                    break;
+                case GameType.Multiplication:
+                    return '*';
+                    break;
+                default:
+                    throw new System.ArgumentOutOfRangeException(nameof(gameType), gameType, "Unknown game type");
+                    break;
+            }
+        }
+
+        internal static int GetCorrectResult(GameType gameType, int firstNumber, int secondNumber)
+        {
+            switch (gameType)
+            {
+                case GameType.Addition:
+                    return firstNumber + secondNumber;
+                    break;
+                case GameType.Subtraction:
+                    return firstNumber - secondNumber;
+                    break;
+                case GameType.Division:
+                    return firstNumber / secondNumber;
+                    break;
+                case GameType.Multiplication:
+                    return firstNumber * secondNumber;
+                    break;
+                default:
+                    throw new System.ArgumentOutOfRangeException(nameof(gameType), gameType, "Unknown game type");
+                    break;
+            }
+        }
     }
 }
